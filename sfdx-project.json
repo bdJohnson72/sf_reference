@@ -8,7 +8,7 @@
       "path": "src/core",
       "package": "core_package",
       "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionNumber": "1.0.0.NEXT",
       "default": false,
       "versionDescription": ""
     }
@@ -18,6 +18,8 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "59.0",
   "packageAliases": {
-    "core_package": "0Hoal000000054XCAQ"
+    "core_package": "0Hoal000000054XCAQ",
+    "core_package@0.1.0-1": "04tal0000005ZRlAAM",
+    "core_package@1.0.0-1": "04tal0000005ZTNAA2"
   }
 }
