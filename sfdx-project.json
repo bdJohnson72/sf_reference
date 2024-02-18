@@ -1,0 +1,23 @@
+{
+  "packageDirectories": [
+    {
+      "path": "src",
+      "default": true
+    },
+    {
+      "path": "src/core",
+      "package": "core_package",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
+    }
+  ],
+  "name": "reference",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "59.0",
+  "packageAliases": {
+    "core_package": "0Hoal000000054XCAQ"
+  }
+}
