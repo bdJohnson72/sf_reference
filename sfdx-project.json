@@ -11,6 +11,19 @@
       "versionNumber": "1.0.0.NEXT",
       "default": false,
       "versionDescription": ""
+    },
+    {
+      "path": "src/car_hunter",
+      "package": "car_hunter",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "",
+      "dependencies": [
+        {
+          "package": "core_package@1.0.0-1"
+        }
+      ]
     }
   ],
   "name": "reference",
@@ -20,6 +33,7 @@
   "packageAliases": {
     "core_package": "0Hoal000000054XCAQ",
     "core_package@0.1.0-1": "04tal0000005ZRlAAM",
-    "core_package@1.0.0-1": "04tal0000005ZTNAA2"
+    "core_package@1.0.0-1": "04tal0000005ZTNAA2",
+    "car_hunter": "0Hoal0000000569CAA"
   }
 }
