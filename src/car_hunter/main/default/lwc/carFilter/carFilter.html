@@ -1,0 +1,63 @@
+<!--
+ - Created by bjohnson on 2/19/24.
+ -->
+
+<!-- Car Filter -->
+<template>
+    <lightning-card title="Filters" icon-name="standard:calibration">
+        <div class="slds-m-horizontal_medium">
+            <lightning-input label="Search"
+                             type="search"
+                             onchange={handleSearchKeyChange}
+                             value={filters.searchKey}>
+            </lightning-input>
+            <section>
+                <lightning-slider label="MSRP"
+                                  onchange={handleMaxValueChange}
+                                  value={filters.maxValue}
+                                  min="0"
+                                  step="100"
+                                  max="99999">
+                </lightning-slider>
+            </section>
+            <section>
+                <h2>Category</h2>
+                <template lwc:if={categoryData}>
+                  <template for:each={categoryData.values} for:item="category">
+                      <lightning-input type="checkbox"
+                                       onchange={handleCheckBoxChange}
+                                       label={category.label}
+                                       data-name = "category"
+                                       data-value = {category.value}
+                                       key={category.value}
+                                       checked></lightning-input>
+
+                  </template>
+                </template>
+                <template lwc:else>
+                    Error getting categories
+                </template>
+
+            </section>
+            <section>
+                <h2>Manufacturer</h2>
+                <template lwc:if={manufacturerData}>
+                    <template for:each={manufacturerData.values} for:item="manufactuer">
+                        <lightning-input type="checkbox"
+                                         data-name = "makeName"
+                                         data-value = {manufactuer.value}
+                                         onchange={handleCheckBoxChange}
+                                         label={manufactuer.label}
+                                         key={manufactuer.value}
+                                         checked></lightning-input>
+                    </template>
+                </template>
+                <template lwc:else>
+                    Error getting make
+                </template>
+
+            </section>
+        </div>
+
+    </lightning-card>
+</template>
