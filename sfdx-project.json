@@ -1,15 +1,12 @@
 {
   "packageDirectories": [
-    {
-      "path": "src",
-      "default": true
-    },
+
     {
       "path": "src/core",
       "package": "core_package",
       "versionName": "ver 0.1",
       "versionNumber": "1.0.0.NEXT",
-      "default": false,
+      "default": true,
       "versionDescription": ""
     },
     {
@@ -24,6 +21,22 @@
           "package": "core_package@1.0.0-1"
         }
       ]
+    },
+    {
+      "path": "src/formula_force",
+      "package": "formula_force",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
+    },
+    {
+      "path": "src/lwc_reference",
+      "package": "lwc_reference",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
     }
   ],
   "name": "reference",
@@ -34,6 +47,8 @@
     "core_package": "0Hoal000000054XCAQ",
     "core_package@0.1.0-1": "04tal0000005ZRlAAM",
     "core_package@1.0.0-1": "04tal0000005ZTNAA2",
-    "car_hunter": "0Hoal0000000569CAA"
+    "car_hunter": "0Hoal0000000569CAA",
+    "formula_force": "0Hoal00000005KfCAI",
+    "lwc_reference": "0Hoal00000005MHCAY"
   }
 }
