@@ -5,6 +5,20 @@
 <!-- Car Card -->
 <template>
     <lightning-card title="car card" icon-name="standard:apex_plugin">
+        <div class="slds-m-horizontal_medium">
+            <lightning-record-view-form record-id={recordId}
+                                        object-api-name="Car__c"
+                                        density="compact">
+                <lightning-output-field field-name={category}></lightning-output-field>
+                <lightning-output-field field-name={make}></lightning-output-field>
+                <lightning-output-field field-name={msrp}></lightning-output-field>
+                <section>Other Features</section>
+                <lightning-output-field field-name={fuel}></lightning-output-field>
+                <lightning-output-field field-name={seats}></lightning-output-field>
+                <lightning-output-field field-name={transmission}></lightning-output-field>
+            </lightning-record-view-form>
+
+        </div>
 
     </lightning-card>
 </template>

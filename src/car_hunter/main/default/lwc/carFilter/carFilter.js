@@ -1,6 +1,4 @@
-/**
- * Created by bjohnson on 2/19/24.
- */
+
 
 import {LightningElement, wire} from 'lwc';
 import {getObjectInfo, getPicklistValues} from "lightning/uiObjectInfoApi";
@@ -26,6 +24,7 @@ export default class CarFilter extends LightningElement {
     })
     categories({error, data}){
         if (data){
+            console.dir(data);
             this.categoryData = data;
         }
         if(error){

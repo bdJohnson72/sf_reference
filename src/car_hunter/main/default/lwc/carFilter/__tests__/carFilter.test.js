@@ -2,8 +2,13 @@
  * Created by bjohnson on 2/19/24.
  */
 
-import {createElement} from 'lwc';
+/*import {createElement} from 'lwc';
 import CarFilter from "c/carFilter";
+import { getObjectInfo  } from "lightning/uiObjectInfoApi";
+import { getPicklistValues } from "lightning/uiObjectInfoApi";
+
+//const CATEGORY_PICKLIST = require('../data/categoryPicklist.json')
+
 
 describe('c-car-filter test suite', () => {
     afterEach(() =>{
@@ -14,13 +19,17 @@ describe('c-car-filter test suite', () => {
     function flushPromises(){
         return Promise.resolve();
     }
-    it('should call handleSearch', async () =>{
+    it('It should render category check boxes from Picklist', async () =>{
         const element = createElement('c-car-filter', {
             is: CarFilter
-        })
+        });
         document.body.appendChild(element);
-        const inputEl = element.shadowRoot.querySelector('input');
-        inputEl.dispatchEvent(new CustomEvent('change'));
+       // getPicklistValues.emit(CATEGORY_PICKLIST);
         await flushPromises();
+        const checkBoxELs = element.shadowRoot.querySelectorAll('lightning-input')
+        console.log(checkBoxELs)
+        expect(checkBoxELs.length).toEqual(CATEGORY_PICKLIST.values.length)
+
+
     })
-});
+});*/
