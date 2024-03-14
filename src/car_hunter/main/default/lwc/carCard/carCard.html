@@ -4,10 +4,12 @@
 
 <!-- Car Card -->
 <template>
-    <lightning-card title="car card" icon-name="standard:apex_plugin">
+    <lightning-card title={nameValue} icon-name="standard:apex_plugin">
         <div class="slds-m-horizontal_medium">
+            <img src={pictureURL} alt="car image"/>
             <lightning-record-view-form record-id={recordId}
                                         object-api-name="Car__c"
+                                        onload={handleFormLoaded}
                                         density="compact">
                 <lightning-output-field field-name={category}></lightning-output-field>
                 <lightning-output-field field-name={make}></lightning-output-field>

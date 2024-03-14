@@ -1,0 +1,23 @@
+/**
+ * Created by bjohnson on 3/10/24.
+ */
+
+
+c-car-tile{
+    min-width: 200px;
+    flex: 1;
+    pointer-events: none;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.wrapper{
+    background-color: lightgray;
+}
