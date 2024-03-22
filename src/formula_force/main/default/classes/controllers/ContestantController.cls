@@ -11,6 +11,9 @@ public with sharing class ContestantController {
         } catch (Exception e) {
             Logger.error('Error awarding points', e);
             Logger.saveLog(Logger.SaveMethod.EVENT_BUS);
+            System.debug('e = ' +   e.getMessage());
+          //  System.debug('fields ' + e.getInaccessibleFields());
+            System.debug(e.getStackTraceString());
             FormulaForceApplication.throwAuraHandledException(e);
         }
     }

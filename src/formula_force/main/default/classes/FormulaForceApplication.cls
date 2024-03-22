@@ -4,7 +4,7 @@
 
 public with sharing class FormulaForceApplication {
 
-    public static final fflib_Application.UnitOfWorkFactory UnitOfWork =
+    public static final UnitOfWorkFactory UnitOfWork =
             new UnitOfWorkFactory(
                    new List<SObjectType>{
                            Driver__c.SObjectType,
@@ -16,6 +16,7 @@ public with sharing class FormulaForceApplication {
             new fflib_Application.SelectorFactory(
                     new Map<SObjectType, Type>{
                             Contestant__c.SObjectType => ContestantsSelector.class,
+                            Driver__c.SObjectType => DriversSelector.class,
                             Race__c.SObjectType => RacesSelector.class,
                             Championship_Points__mdt.SObjectType => ChampionshipPointsSelector.class
                     }
@@ -31,7 +32,9 @@ public with sharing class FormulaForceApplication {
     public static final fflib_Application.DomainFactory Domain = new fflib_Application.DomainFactory(
             FormulaForceApplication.Selector,
             new Map<SObjectType, Type>{
-                    Driver__c.SObjectType => Drivers.Constructor.class
+                    Driver__c.SObjectType => Drivers.Constructor.class,
+                    Car__c.SObjectType => Cars.Constructor.class,
+                    Contestant__c.SObjectType => Contestants.Constructor.class
             }
     );
 

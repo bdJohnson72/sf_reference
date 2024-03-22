@@ -2,11 +2,11 @@
  * Created by bjohnson on 11/18/23.
  */
 
-public with sharing class ContestantService {
+public inherited sharing class ContestantService {
 
     public class contestantServiceException extends Exception{}
     public static void awardChampionshipPoints(Set<Id> contestantIds){
-        fflib_ISObjectUnitOfWork uow = FormulaForceApplication.UnitOfWork.newInstance();
+        fflib_ISObjectUnitOfWork uow = FormulaForceApplication.UnitOfWork.newInstance(AccessLevel.SYSTEM_MODE);
         awardChampionshipPoints(uow, FormulaForceApplication.Selector.selectById(contestantIds));
         uow.commitWork();
     }

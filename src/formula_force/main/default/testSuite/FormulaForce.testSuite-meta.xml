@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexTestSuite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <testClassName>ContestantControllerTest</testClassName>
+    <testClassName>CarsTest</testClassName>
+    <testClassName>ContestantServiceTest</testClassName>
+    <testClassName>ContestantsTest</testClassName>
+    <testClassName>DriversTest</testClassName>
+    <testClassName>RaceControllerTest</testClassName>
+    <testClassName>RaceServiceTest</testClassName>
+    <testClassName>SeasonControllerTest</testClassName>
+    <testClassName>SeasonNewsLetterSchedulerTest</testClassName>
+    <testClassName>SeasonServiceTest</testClassName>
+</ApexTestSuite>
