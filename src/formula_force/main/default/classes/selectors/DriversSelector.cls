@@ -2,7 +2,7 @@
  * Created by bjohnson on 3/26/24.
  */
 
-public inherited sharing class DriversSelector extends fflib_SObjectSelector {
+public inherited sharing class DriversSelector extends ApplicationSelector {
 
     public List<Schema.SObjectField> getSObjectFieldList(){
         return new List<Schema.SObjectField>{

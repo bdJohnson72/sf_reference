@@ -2,7 +2,7 @@
  * Created by bjohnson on 11/18/23.
  */
 
-public inherited sharing class ContestantsSelector extends fflib_SObjectSelector {
+public inherited sharing class ContestantsSelector extends ApplicationSelector {
 
     public List<Schema.SObjectField> getSObjectFieldList(){
        return new List<Schema.SObjectField>{

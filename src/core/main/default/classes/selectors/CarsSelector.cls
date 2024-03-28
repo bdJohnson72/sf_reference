@@ -2,7 +2,7 @@
  * Created by bjohnson on 3/26/24.
  */
 
-public inherited sharing class CarsSelector extends fflib_SObjectSelector {
+public inherited sharing class CarsSelector extends ApplicationSelector {
 
     public List<Schema.SObjectField> getSObjectFieldList(){
         return new List<Schema.SObjectField>{

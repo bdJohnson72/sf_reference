@@ -23,8 +23,38 @@ private class ContestantsTest {
         contestants.validate();
         Assert.isTrue(contestantBad.hasErrors(), 'Should have error added');
         Assert.isFalse(contestantGood.hasErrors(), 'Should not have error added');
-
     }
+
+    @IsTest
+    static void itShouldAwardPoints(){
+        fflib_ApexMocks mocks = new fflib_ApexMocks();
+
+        // Given
+        fflib_SObjectUnitOfWork mockUow = (fflib_SObjectUnitOfWork) mocks.mock(fflib_SObjectUnitOfWork.class);
+        FormulaForceApplication.UnitOfWork.setMock(mockUow);
+        Id testContestantId = fflib_IDGenerator.generate(Contestant__c.SObjectType);
+        List<Contestant__c> testContestants =
+                new List<Contestant__c> {
+                        new Contestant__c (
+                                Id = testContestantId,
+                                RacePosition__c = 1 )
+                };
+
+
+        // When
+         new Contestants(testContestants).awardChampionshipPoints(mockUow);
+
+        // Then
+        ((fflib_SObjectUnitOfWork)
+                mocks.verify(mockUow, 1)).registerDirty(
+                fflib_Match.sObjectWith(
+                        new Map<SObjectField, Object>{
+                                Contestant__c.Id => testContestantId,
+                                Contestant__c.RacePosition__c => 1,
+                                Contestant__c.ChampionshipPoints__c => 25}
+                        ));
+    }
+
 
     @IsTest
     static void itShouldAddErrorsOnChangeIntegration(){

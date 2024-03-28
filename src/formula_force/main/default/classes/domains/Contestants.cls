@@ -12,6 +12,10 @@ public with sharing class Contestants extends fflib_SObjects {
         validateRaceIsScheduled();
     }
 
+    public List<Contestant__c> getContestants(){
+        return (List<Contestant__c>) getRecords();
+    }
+
 
     private void validateRaceIsScheduled() {
         Set<Id> raceIds = getIdFieldValues(Contestant__c.Race__c);
@@ -21,6 +25,18 @@ public with sharing class Contestants extends fflib_SObjects {
             Race__c relatedRace = racesById.get(contestant.Race__c);
             if (relatedRace.Status__c != 'Scheduled') {
                 contestant.addError('Contestant must be added to a scheduled race');
+            }
+        }
+    }
+
+    public void awardChampionshipPoints(fflib_ISObjectUnitOfWork uow){
+        Map<Integer, Championship_Points__mdt> pointsByTrackPosition =
+                new ChampionshipPointsSelector().pointsByTrackPosition();
+        for(Contestant__c contestant : getContestants()){
+            Championship_Points__mdt points = pointsByTrackPosition.get(Integer.valueOf(contestant.RacePosition__c));
+            if (points != null ) {
+               contestant.ChampionshipPoints__c = points.PointsAwarded__c;
+                uow.registerDirty(contestant);
             }
         }
     }

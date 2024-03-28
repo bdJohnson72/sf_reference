@@ -2,7 +2,7 @@
  * Created by bjohnson on 11/18/23.
  */
 
-public inherited sharing class RacesSelector extends fflib_SObjectSelector {
+public inherited sharing class RacesSelector extends ApplicationSelector {
 
     public List<SObjectField> getSObjectFieldList() {
 

@@ -27,6 +27,24 @@ public with sharing class ContestantControllerTest {
     }
 
     @IsTest
+    static void  itShouldHandleException(){
+        fflib_ApexMocks mocks = new fflib_ApexMocks();
+        ContestantService serviceMock = (ContestantService)mocks.mock(ContestantService.class);
+        fflib_ISObjectUnitOfWork uowMock = (fflib_ISObjectUnitOfWork)mocks.mock(fflib_ISObjectUnitOfWork.class);
+        mocks.startStubbing();
+        ((fflib_ISObjectUnitOfWork)mocks.doThrowWhen(new ContestantService.contestantServiceException(),uowMock)).commitWork();
+        mocks.stopStubbing();
+        FormulaForceApplication.UnitOfWork.setMock(uowMock);
+        try {
+           ContestantController.awardPoints(fflib_IDGenerator.generate(Contestant__c.SObjectType));
+            Assert.fail();
+        } catch (Exception e) {
+            Assert.isTrue(e instanceof AuraHandledException);
+        }
+
+    }
+
+    @IsTest
     static void retireFromRace(){
         try {
            ContestantService.retireFromRace(null);

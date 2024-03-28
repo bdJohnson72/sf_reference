@@ -2,7 +2,7 @@
  * Created by bjohnson on 11/18/23.
  */
 
-public with sharing class ChampionshipPointsSelector extends fflib_SObjectSelector {
+public with sharing class ChampionshipPointsSelector extends ApplicationSelector {
     public  List<SObjectField> getSObjectFieldList() {
 
         return new List<Schema.SObjectField> {

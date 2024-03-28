@@ -20,7 +20,7 @@ public with sharing class RaceServiceImpl implements IRaceService {
             contestants.addAll(race.Contestants__r);
         }
         //delegate to Contestant Service
-        ContestantService.awardChampionshipPoints(uow, contestants);
+        ContestantService.awardChampionshipPoints(new Map<Id, Contestant__c>(contestants).keySet());
         uow.commitWork();
     }
 }

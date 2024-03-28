@@ -2,7 +2,7 @@
  * Created by bjohnson on 3/26/24.
  */
 
-public with sharing class Teams extends fflib_SObjects implements ComplianceService.ICompliant{
+public inherited sharing  class Teams extends fflib_SObjects implements ComplianceService.ICompliant{
 
     public Teams(List<Team__c> teams){
         super(teams);
