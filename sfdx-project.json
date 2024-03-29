@@ -1,6 +1,5 @@
 {
   "packageDirectories": [
-
     {
       "path": "src/core",
       "package": "core_package",
@@ -37,6 +36,14 @@
       "versionNumber": "0.1.0.NEXT",
       "default": false,
       "versionDescription": ""
+    },
+    {
+      "path": "src/job_tracker",
+      "package": "cc_job_application",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
     }
   ],
   "name": "reference",
@@ -49,6 +56,7 @@
     "core_package@1.0.0-1": "04tal0000005ZTNAA2",
     "car_hunter": "0Hoal0000000569CAA",
     "formula_force": "0Hoal00000005KfCAI",
-    "lwc_reference": "0Hoal00000005MHCAY"
+    "lwc_reference": "0Hoal00000005MHCAY",
+    "cc_job_application": "0Hoal0000000ITBCA2"
   }
 }
