@@ -1,0 +1,46 @@
+/**
+ * Created by brooksjohnson on 4/12/24.
+ */
+
+:host{
+    --dark-blue: #022451;
+}
+
+.app {
+    background: var(--dark-blue);
+    min-height: 100vh;
+    font-size: 16px;
+    padding: .75rem;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background: white;
+    border-radius: 12px;
+    margin: .75rem;
+}
+
+.box-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dotted-circle{
+    border: 2px dashed var(--dark-blue);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.icon-color {
+    --slds-c-icon-color-foreground-default: var(--dark-blue);
+}

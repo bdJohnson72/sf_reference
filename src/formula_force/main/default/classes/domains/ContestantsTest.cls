@@ -7,8 +7,10 @@ private class ContestantsTest {
     @IsTest
     static void itShouldAddError() {
         fflib_ApexMocks mocks = new fflib_ApexMocks();
-        Race__c race1 = new Race__c(Id = fflib_IDGenerator.generate(Race__c.SObjectType), Status__c = 'Active');
-        Race__c race2 = new Race__c(Id = fflib_IDGenerator.generate(Race__c.SObjectType), Status__c = 'Scheduled');
+        Race__c race1 = new Race__c(Id = fflib_IDGenerator.generate(Race__c.SObjectType),
+                Status__c = 'Active');
+        Race__c race2 = new Race__c(Id = fflib_IDGenerator.generate(Race__c.SObjectType),
+                Status__c = 'Scheduled');
         Contestant__c contestantGood = new Contestant__c( Race__c = race2.Id );
         Contestant__c contestantBad = new Contestant__c( Race__c = race1.Id );
         RacesSelector mockSelector = (RacesSelector) mocks.mock(RacesSelector.class);
