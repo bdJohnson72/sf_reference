@@ -14,6 +14,8 @@ public with sharing class ContestantController {
             System.debug('e = ' +   e.getMessage());
           //  System.debug('fields ' + e.getInaccessibleFields());
             System.debug(e.getStackTraceString());
+            //The logging is done with platform event or when we throw the exception the transation will get rolled
+            //back be careful with catch blocks
             FormulaForceApplication.throwAuraHandledException(e);
         }
     }

@@ -620,6 +620,7 @@ public virtual class fflib_SObjectUnitOfWork
      **/
 	public void commitWork()
 	{
+        System.debug('calling commit work');
 		Savepoint sp = Database.setSavepoint();
 		Boolean wasSuccessful = false;
 		try

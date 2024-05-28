@@ -21,6 +21,7 @@ public with sharing class RaceServiceImpl implements IRaceService {
         }
         //delegate to Contestant Service
         ContestantService.awardChampionshipPoints(new Map<Id, Contestant__c>(contestants).keySet());
+        System.debug('contestants = ' + contestants);
         uow.commitWork();
     }
 }

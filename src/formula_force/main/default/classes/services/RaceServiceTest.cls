@@ -28,7 +28,7 @@ private class RaceServiceTest {
         //when
         RaceService.awardChampionshipPoints(new Set<Id>{mockRace.Id});
         //then
-        ((fflib_ISObjectUnitOfWork)mocks.verify(mockUOW, 1)).commitWork();
+        ((fflib_ISObjectUnitOfWork)mocks.verify(mockUOW, 2 )).commitWork();
         ((fflib_ISobjectUnitOfWork)mocks.verify(mockUOW, 1)).registerDirty(fflib_Match.sObjectWith(
                 new Map<SObjectField, Object>{
                         Contestant__c.Id  => mockContestant.Id,

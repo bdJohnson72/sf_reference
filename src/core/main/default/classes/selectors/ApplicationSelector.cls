@@ -1,5 +1,5 @@
 /**
- *@description used to default into User Mode and
+ *@description used to default into System Mode and
  * disable sorting of fields for performance improvements
  */
 
@@ -10,7 +10,7 @@ public inherited sharing abstract class ApplicationSelector extends fflib_SObjec
     }
 
     public ApplicationSelector(Boolean includeFieldSets){
-        this(includeFieldSets, fflib_SObjectSelector.DataAccess.USER_MODE);
+        this(includeFieldSets, fflib_SObjectSelector.DataAccess.SYSTEM_MODE);
     }
 
     public ApplicationSelector(Boolean includeFieldSets, fflib_SObjectSelector.DataAccess accessMode){

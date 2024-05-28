@@ -1,5 +1,7 @@
 /**
  * Created by bjohnson on 1/2/24.
+ * Defaults unit of work to System Mode
+ * PMD warnings on crud supressed do to false postives
  */
 
 public with sharing class UnitOfWorkFactory extends fflib_Application.UnitOfWorkFactory {
@@ -8,14 +10,15 @@ public with sharing class UnitOfWorkFactory extends fflib_Application.UnitOfWork
     }
 
     public override fflib_ISObjectUnitOfWork newInstance(){
-        return newInstance(AccessLevel.USER_MODE);
+        return newInstance(AccessLevel.SYSTEM_MODE);
     }
 
     public fflib_ISObjectUnitOfWork newInstance(AccessLevel accessLevel){
         return newInstance(new UnitOfWorkDMLWithAccessLevel(accessLevel));
     }
 
-    public class UnitOfWorkDMLWithAccessLevel extends fflib_SObjectUnitOfWork.SimpleDML{
+    @SuppressWarnings('PMD.ApexCrudViolation')
+    public without sharing class UnitOfWorkDMLWithAccessLevel extends fflib_SObjectUnitOfWork.SimpleDML{
        private AccessLevel accessLevel;
 
         public UnitOfWorkDMLWithAccessLevel(AccessLevel accessLevel){

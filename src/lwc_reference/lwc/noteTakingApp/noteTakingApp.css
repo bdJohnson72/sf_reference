@@ -4,9 +4,15 @@
 
 :host{
     --dark-blue: #022451;
+    --background: #0076d3;
+    --light-red: #e91515;
 }
 
 .app {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
     background: var(--dark-blue);
     min-height: 100vh;
     font-size: 16px;
@@ -35,12 +41,50 @@
     border-radius: 50%;
 }
 
+
 h2{
     font-size: 1.5rem;
     font-weight: 700;
-    margin-top: 12px;
 }
 
 .icon-color {
     --slds-c-icon-color-foreground-default: var(--dark-blue);
 }
+.edit-icon {
+    --slds-c-icon-color-background: var(--dark-blue);
+    margin-right: 5px;
+}
+
+.delete-icon {
+    --slds-c-icon-color-background: var(--light-red);
+}
+
+header {
+    background: var(--background);
+    color: white;
+    text-align: center;
+    padding: .25rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ .notes {
+     height: 221px;
+     overflow: auto;
+     padding: .25rem 1rem;
+ }
+
+ .date {
+     font-size: .8rem;
+     font-style: italic;
+     color: darkgray;
+ }
+ .footer {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     padding: .25rem 1rem;
+     background: lightgray;
+     border-bottom-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+ }
+

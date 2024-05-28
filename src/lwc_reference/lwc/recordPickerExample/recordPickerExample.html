@@ -1,0 +1,17 @@
+<!--
+ - Created by brooksjohnson on 4/22/24.
+ -->
+
+<!-- Record Picker Example -->
+<template>
+    <lightning-card title='Record Picker Demo'>
+        <div>
+            <lightning-record-picker label='Accounts'
+                                     onchange={handleChange}
+                                     display-info={displayInfo}
+                                     placeholder='Search Accounts'
+                                     object-api-name="Account">
+            </lightning-record-picker>
+        </div>
+    </lightning-card>
+</template>

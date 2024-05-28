@@ -4,8 +4,9 @@
 
 <!-- Note Taking App -->
 <template>
+
     <div class="app">
-        <div class="box box-center">
+        <div class="box box-center" onclick={createNote}>
             <div class="dotted-circle">
                 <lightning-icon icon-name='utility:add'
                                 class='icon-color'
@@ -15,6 +16,61 @@
             </div>
             <h2>Add New Note</h2>
         </div>
+        <div class='box slds-var-m-bottom_medium'>
+            <header>
+                <h2>Note Heading</h2>
+            </header>
+            <div class="notes">
+                notes go here
+            </div>
+            <footer class='footer'>
+                <div class='date'>April 2024</div>
+                <div>
+                    <lightning-icon icon-name='action:edit'
+                                    alternative-text='edit'
+                                    class='edit-icon'
+                                    size='xx-small'
+                                    title='edit'>
+                    </lightning-icon>
+                    <lightning-icon icon-name='action:delete'
+                                    alternative-text='delete'
+                                    class='delete-icon'
+                                    size='xx-small'
+                                    title='delete'>
+                    </lightning-icon>
+
+                </div>
+            </footer>
+        </div>
     </div>
-    di
+    <template lwc:if={showModal}>
+        <c-note-app-modal >
+            <h1 slot='header' class='slds-modal_title'>Add Note</h1>
+            <form>
+                <lightning-input type="text"
+                                 value={noteRecord.Name}
+                                 label='Title'
+                                 name='Name'
+                                 onchange={handleChange}
+                                 class='slds-m-bottom_medium'>
+                </lightning-input>
+                <lightning-input-rich-text
+                    value={noteRecord.Note_Description__c}
+                    name="Note_Description__c"
+                    label='Description'
+                    label-visible
+                    onchange={handleChange}
+                    formats={formats}>
+                </lightning-input-rich-text>
+
+            </form>
+            <footer slot='footer'>
+                <button class="slds-button slds-button_neutral"
+                        onclick={closeModal}>Cancel</button>
+                <button class="slds-button slds-button_brand"
+                        disabled={isFormValid}
+                        onclick={formSubmitHandler}>Save</button>
+            </footer>
+        </c-note-app-modal>
+    </template>
 </template>
