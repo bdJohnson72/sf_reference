@@ -1,0 +1,57 @@
+<!--
+ - Created by brooksjohnson on 6/17/24.
+ -->
+
+<!-- Currency Convert App -->
+<template>
+    <div class="currency-app">
+        <div class="container">
+            <div class="slds-card custom-card">
+                <form onsubmit={submitHandler}>
+                <h1>Currency Converter</h1>
+                <img src={currencyImage} alt="currency icon" height="150" width="150">
+                <lightning-input type="number"
+                                 class="slds-m-vertical_x-large"
+                                 label="Amount"
+                                 placeholder="Amount"
+                                 variant="label-hidden"
+                                 required>
+                </lightning-input>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-combobox name="countryFrom"
+                                            label="From"
+                                            value={countryFrom}
+                                            options={countryList}
+                                            onchange={handleChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col icon-center">
+                        <lightning-icon icon-name='action:change_record_type'
+                                        alternative-text='change_record_type'
+                                        size='small'
+                                        class="custom-icon"
+                                        title='convert icon'>
+                        </lightning-icon>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-combobox name="countryTo"
+                                            label="To"
+                                            value={countryTo}
+                                            options={countryList}
+                                            onchange={handleChange}>
+                        </lightning-combobox>
+
+
+                    </div>
+                </div>
+                <button class="slds-button slds-button_stretch"
+                        type="submit">
+                    Convert
+                </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</template>

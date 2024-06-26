@@ -1,0 +1,63 @@
+/**
+ * Created by brooksjohnson on 6/17/24.
+ */
+
+:host(){
+    --yellow: #f9cd0b;
+    --dark-blue: #0b2451;
+}
+/** styling hooks */
+.custom-icon {
+    --slds-c-icon-color-foreground-default: var(--yellow);
+    --slds-c-icon-color-background: var(--yellow);
+    --slds-c-icon-color-foreground: var(--dark-blue);
+    transform: rotate(45deg);
+}
+/** end styling hooks */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 400px;
+    padding: 1rem;
+}
+.custom-card {
+    max-width: 520px;
+    background: #0b2451;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.currency-app{
+    background-image: url(/sfsites/c/resource/currencyConverterAerssets/currencyConverterAssets/currencyAppBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1{
+    color: white;;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+button{
+    background-color: #f9cd0b;
+    color: #1d1e33;
+    font-size: 1.75rem;
+    margin-top: .75rem;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+button:hover, button:active {
+    background-color: #f9b90b;
+}
+
+.icon-center{
+    align-self: center;
+}
