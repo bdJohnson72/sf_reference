@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box">
+       <template lwc:if={mapMarkers}>
+           <lightning-map map-markers={mapMarkers}
+                          markers-title={markersTitle}
+                          onmarkerselect={handleSelectedMarker}
+                          selected-marker-value={selectedMarker}>
+           </lightning-map>
+       </template>
+        <template lwc:else>
+            No data found
+        </template>
+
+    </div>
+</template>

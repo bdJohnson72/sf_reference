@@ -1,0 +1,62 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "alarm-clock",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"6d2273cb-7a75-4595-9863-ea0d8272cc8e\",\"columns\":[{\"UUID\":\"6ee99a2e-5779-4af6-bc6f-4ef85b1b95e7\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:alarmClock",
+              "id" : "0034baf7-8453-4804-8c7b-b8f86f1a47e6",
+              "type" : "component"
+            } ],
+            "id" : "6ee99a2e-5779-4af6-bc6f-4ef85b1b95e7",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "6d2273cb-7a75-4595-9863-ea0d8272cc8e",
+          "type" : "component"
+        } ],
+        "id" : "4302a6bd-8f16-4648-9302-0c524ba6d02f",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "alarm-clock",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "e1f676cc-5098-4619-8d19-827e611db860",
+          "type" : "component"
+        } ],
+        "id" : "f7a034d0-f256-401f-a9d3-4ccb6d7ffdcf",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "74e9121c-0938-4e6b-b0a4-9fabd1b00640",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-alarm-clock"
+  }
+}

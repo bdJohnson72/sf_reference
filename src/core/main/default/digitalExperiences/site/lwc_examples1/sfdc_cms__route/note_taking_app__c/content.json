@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "note taking app",
+  "contentBody" : {
+    "activeViewId" : "note_taking_app",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-note-taking-app",
+    "urlPrefix" : "note-taking-app"
+  }
+}

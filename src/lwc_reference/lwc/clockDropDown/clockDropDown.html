@@ -1,0 +1,19 @@
+<!--
+ - Created by bjohnson on 2/9/24.
+ -->
+
+<!-- Clock Drop Down -->
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="hours">{label}</label>
+        <div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <select class="slds-select" id="hours" onchange={handleChange}>
+                 <template for:each={options} for:item="option">
+                     <option key={option}>{option}</option>
+                 </template>
+                </select>
+            </div>
+        </div>
+    </div>
+</template>

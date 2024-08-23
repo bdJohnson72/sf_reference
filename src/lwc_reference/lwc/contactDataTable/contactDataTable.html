@@ -1,0 +1,17 @@
+<!--
+ - Created by bjohnson on 2/11/24.
+ -->
+
+<!-- Contact Data Table -->
+<template>
+    <template if:true={contacts}>
+        <lightning-datatable
+                hide-checkbox-column
+                show-row-number-column
+                onrowaction={handleRowAction}
+                key-field={id}
+                data={contacts}
+                columns={columns}>
+        </lightning-datatable>
+    </template>
+</template>

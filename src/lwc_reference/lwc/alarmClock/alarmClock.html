@@ -1,0 +1,34 @@
+<!--
+ - Created by bjohnson on 2/8/24.
+ -->
+
+<!-- Alarm Clock -->
+<template>
+    <div class='alarm-card'>
+        <h1>Alarm Clock</h1>
+        <!-- Image here -->
+        <img lwc:ref="image" src={clockImage}
+             class={triggerAlarm}
+             alt="alarm clock image" width="200px" height="200px">
+        <h2 class="slds-var-m-vertical_medium">{currentTime}</h2>
+        <div class="alarm-controls">
+            <c-clock-drop-down label="hours" unique-id="hours" options={hours} onoptionchange={handleOptionChange}></c-clock-drop-down>
+            <c-clock-drop-down label="minutes" unique-id="minutes" options={minutes} onoptionchange={handleOptionChange}></c-clock-drop-down>
+            <c-clock-drop-down label="AM/PM" unique-id="AM/PM" options={amPm} onoptionchange={handleOptionChange}></c-clock-drop-down>
+        </div>
+        <template lwc:if={alarmSet}>
+            <button class="slds-button slds-button_stretch slds-button_neutral"
+                    onclick={clearAlarm}
+                    disabled={areFieldsSelected}>
+             Clear Alarm
+            </button>
+        </template>
+        <template lwc:else>
+            <button class="slds-button slds-button_stretch slds-button_neutral"
+                    onclick={setAlarm}
+                    disabled={areFieldsSelected}>
+                Set Alarm
+            </button>
+        </template>
+    </div>
+</template>

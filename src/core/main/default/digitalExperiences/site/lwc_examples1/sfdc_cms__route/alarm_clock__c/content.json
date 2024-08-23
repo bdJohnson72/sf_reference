@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "alarm-clock",
+  "contentBody" : {
+    "activeViewId" : "alarm_clock",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-alarm-clock",
+    "urlPrefix" : "alarm-clock"
+  }
+}

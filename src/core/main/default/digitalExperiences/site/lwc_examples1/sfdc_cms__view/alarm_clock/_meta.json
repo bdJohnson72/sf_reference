@@ -1,0 +1,5 @@
+{
+  "apiName" : "alarm_clock",
+  "type" : "sfdc_cms__view",
+  "path" : "views"
+}

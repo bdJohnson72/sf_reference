@@ -1,0 +1,61 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "note taking app",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"75fb6131-9c2f-43cc-82a0-0128570c795e\",\"columns\":[{\"UUID\":\"8cf43059-bd11-413f-95a9-8607bdf0d589\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:noteTakingApp",
+              "id" : "026b7532-640c-4c54-9dd5-2cfff879686c",
+              "type" : "component"
+            } ],
+            "id" : "8cf43059-bd11-413f-95a9-8607bdf0d589",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "75fb6131-9c2f-43cc-82a0-0128570c795e",
+          "type" : "component"
+        } ],
+        "id" : "0e38cefa-3922-499e-8184-fc0cd4357ec6",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "note taking app",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "c02f985f-52fd-4018-8fa3-37b6f020521a",
+          "type" : "component"
+        } ],
+        "id" : "c84e9dac-8527-4e03-8d0d-22edfc88ebc3",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "b94c8285-2aee-4909-94be-c2389f86c640",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-note-taking-app"
+  }
+}
