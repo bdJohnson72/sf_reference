@@ -1,0 +1,26 @@
+/**
+ * Created by brooksjohnson on 7/15/24.
+ */
+
+.banner {
+    background: #f6c403;
+    min-height: 300px;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}
+
+.name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.location, .designation{
+    font-size: 1.5rem;
+    color: #243673;
+}

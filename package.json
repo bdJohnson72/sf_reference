@@ -42,5 +42,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "flow-bin": "^0.239.0"
   }
 }
