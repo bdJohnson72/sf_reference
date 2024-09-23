@@ -11,6 +11,10 @@
                 onrowaction={handleRowAction}
                 key-field={id}
                 data={contacts}
+                onsort={handleSort}
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                default-sort-direction={defaultSortingDirection}
                 columns={columns}>
         </lightning-datatable>
     </template>
