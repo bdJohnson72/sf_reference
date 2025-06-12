@@ -44,6 +44,14 @@
       "versionNumber": "0.1.0.NEXT",
       "default": false,
       "versionDescription": ""
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "src/redux",
+      "default": false,
+      "package": "lwc_reduxa",
+      "versionDescription": ""
     }
   ],
   "name": "reference",
@@ -57,6 +65,7 @@
     "car_hunter": "0Hoal0000000569CAA",
     "formula_force": "0Hoal00000005KfCAI",
     "lwc_reference": "0Hoal00000005MHCAY",
-    "cc_job_application": "0Hoal0000000ITBCA2"
+    "cc_job_application": "0Hoal0000000ITBCA2",
+    "lwc_reduxa": "0Hoal0000002aIjCAI"
   }
 }
