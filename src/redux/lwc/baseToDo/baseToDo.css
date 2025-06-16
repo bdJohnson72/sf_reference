@@ -1,0 +1,23 @@
+.status-complete {
+    background-color: #4bca81;
+    width: 8px;
+    min-height: 40px;
+    border-radius: 4px 0 0 4px;
+    margin-right: 0.5rem;
+}
+
+.status-not-started {
+    background-color: #fe5c4c;
+    width: 8px;
+    min-height: 40px;
+    border-radius: 4px 0 0 4px;
+    margin-right: 0.5rem;
+}
+
+.status-in-progress {
+    background-color: #706e6b;
+    width: 8px;
+    min-height: 40px;
+    border-radius: 4px 0 0 4px;
+    margin-right: 0.5rem;
+}

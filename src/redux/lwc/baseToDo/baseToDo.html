@@ -1,0 +1,24 @@
+<!--
+ - Created by brooksjohnson on 6/16/25.
+ -->
+
+<!-- Base To Do -->
+<template>
+    <div class='slds-grid slds-gutters slds-m-around_small slds-box'>
+        <div class={statusColorClass}></div>
+        <div class='slds-col slds-size_10-of-12 slds-text-heading_medium'>{todo.subject}</div>
+        <div class="slds-col">
+            <lightning-button-menu >
+                <lightning-menu-item label='in-progress'
+                                     name='In Progress'
+                                     onclick={handleStatusChange}
+                ></lightning-menu-item>
+                <lightning-menu-item label='complete'
+                                     name='Complete'
+                                     onclick={handleStatusChange}
+                ></lightning-menu-item>
+            </lightning-button-menu>
+        </div>
+
+    </div>
+</template>

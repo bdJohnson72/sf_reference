@@ -1,0 +1,13 @@
+<!--
+ - Created by brooksjohnson on 6/16/25.
+ -->
+
+<!-- To Do App -->
+<template>
+    <div class='container slds-card slds-p-around_medium'>
+        <h1 class='slds-text-heading_large'>To Do App</h1>
+        <c-add-to-do onaddtodo={addToDos}></c-add-to-do>
+        <c-to-do-filter ontodofilterchange={handleFilterChange}></c-to-do-filter>
+        <c-to-do-list todos={toDoStore.currentToDos} ontodostatuschange= {handleToDoStatusChange}></c-to-do-list>
+    </div>
+</template>

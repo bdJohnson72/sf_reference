@@ -1,0 +1,25 @@
+<!--
+ - Created by brooksjohnson on 6/16/25.
+ -->
+
+<!-- Add To Do -->
+<template>
+    <section class='slds-grid slds-gutters'>
+        <div class='slds-col slds-size_3-of-5'>
+            <lightning-input type="text"
+                             label="Add To Do"
+                             variant="label-hidden"
+                             value={toDoValue}
+                             onchange={handleToDoChange}
+                             placeholder="Add to do">
+            </lightning-input>
+        </div>
+        <div class='slds-size_2-of-5 slds-col'>
+            <lightning-button label="Add"
+                              variant="success"
+                              onclick={handleAddToDo}>
+            </lightning-button>
+        </div>
+
+    </section>
+</template>

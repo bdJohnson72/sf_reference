@@ -50,3 +50,7 @@ $RECYCLE.BIN/
 /IlluminatedCloud/
 /out/
 target/
+
+/.illuminatedCloud/
+**/tsconfig*.json
+**/*.tsbuildinfo

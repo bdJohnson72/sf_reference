@@ -1,0 +1,12 @@
+<!--
+ - Created by brooksjohnson on 6/16/25.
+ -->
+
+<!-- To Do List -->
+<template>
+    <template for:each={todos} for:item='todo'>
+        <div key={todo.Id}>
+            <c-base-to-do todo={todo} ontodostatuschange={handleToDoStatusChange}></c-base-to-do>
+        </div>
+    </template>
+</template>

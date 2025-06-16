@@ -1,0 +1,25 @@
+<!--
+ - Created by brooksjohnson on 6/16/25.
+ -->
+
+<!-- To Do Filter -->
+<template>
+    <lightning-button-group >
+        <lightning-button name="Complete"
+                          label="complete"
+                          onclick={handleFilterClick}>
+        </lightning-button>
+        <lightning-button name="In Progress"
+                          label="In Progress"
+                          onclick={handleFilterClick}>
+        </lightning-button>
+        <lightning-button name="Not Started"
+                          label="Not Started"
+                          onclick={handleFilterClick}>
+        </lightning-button>
+        <lightning-button name=""
+                          label="Clear"
+                          onclick={handleFilterClick}>
+        </lightning-button>
+    </lightning-button-group>
+</template>
